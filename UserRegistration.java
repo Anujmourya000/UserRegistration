@@ -40,6 +40,18 @@ public class UserRegistration {
             System.out.println("Its not a valid email...\n correct format is ( e.g 'xyz21@abc.com')");
 
         }
+        
+        System.out.println("Enter the valid phone number: ");
+        String phone = sc.nextLine();
+        boolean result4 = Pattern.compile("^[0-9]{1,3} [0-9]{10}$").matcher(phone).matches();
+        if(result4 == true){
+            System.out.println("you have entered a valid phone number");
+        }else{
+            System.out.println("Its not a valid phone number...\n correct format is ( e.g '91 1234567890')");
+
+        }
+
+
 
     }
 }
