@@ -51,7 +51,7 @@ public class UserRegistration {
 
         }
 
-        System.out.println("Enter the valid password: ");
+        System.out.println("Enter the valid password : ");
         System.out.println("Rule1: should contain atleast 8 character ");
         System.out.println("Rule2: Should contain 1 Upper case ");
         System.out.println("Rule3: Should contain 1 Numeric ");
@@ -65,6 +65,15 @@ public class UserRegistration {
 
         }
 
+        System.out.println("Enter the valid email addresses which are used as valid: ");
+        String email2 = sc.nextLine();
+        boolean result6 = Pattern.compile("^[a-zA-Z0-9_!#$%&’*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$").matcher(email2).matches();
+        if(result6 == true){
+            System.out.println("you have entered a valid email address");
+        }else{
+            System.out.println("Its not a valid email...\n correct format is ( e.g 'xyz21@abc.com')");
+
+        }
 
     }
 }
