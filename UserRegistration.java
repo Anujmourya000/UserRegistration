@@ -30,5 +30,16 @@ public class UserRegistration {
             System.out.println("Its not a valid last name...\n correct format is ( e.g 'Mathew')");
 
         }
+
+        System.out.println("Enter the valid email address: ");
+        String email = sc.nextLine();
+        boolean result3 = Pattern.compile("^[a-zA-Z0-9]+(?:\\.[a-zA-Z0-9]+)*@[a-zA-Z0-9]+(?:\\.[a-zA-Z0-9]{2,}+)*$").matcher(email).matches();
+        if(result3 == true){
+            System.out.println("you have entered a valid email address");
+        }else{
+            System.out.println("Its not a valid email...\n correct format is ( e.g 'xyz21@abc.com')");
+
+        }
+
     }
 }
