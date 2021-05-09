@@ -40,7 +40,7 @@ public class UserRegistration {
             System.out.println("Its not a valid email...\n correct format is ( e.g 'xyz21@abc.com')");
 
         }
-        
+
         System.out.println("Enter the valid phone number: ");
         String phone = sc.nextLine();
         boolean result4 = Pattern.compile("^[0-9]{1,3} [0-9]{10}$").matcher(phone).matches();
@@ -51,6 +51,15 @@ public class UserRegistration {
 
         }
 
+        System.out.println("Enter the valid password: ");
+        String password = sc.nextLine();
+        boolean result5 = Pattern.compile("^[a-z]{8,}$").matcher(password).matches();
+        if(result5 == true){
+            System.out.println("you have entered a valid password");
+        }else{
+            System.out.println("Its not a valid password...\n correct format is ( should have minimum 8 characters)");
+
+        }
 
 
     }
