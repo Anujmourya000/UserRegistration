@@ -14,13 +14,21 @@ public class UserRegistration {
         System.out.println("Welcome to User Registration");
         System.out.println("Enter the valid first name: ");
         String firstname = sc.nextLine();
-        boolean result = Pattern.matches("[A-Z][a-z]{3,}", firstname); //true
-        if(result == true){
+        boolean result1 = Pattern.matches("[A-Z][a-z]{3,}", firstname);
+        if(result1 == true){
             System.out.println("you have entered a valid first name");
         }else{
             System.out.println("Its not a valid first name...\n correct format is ( e.g 'John')");
 
         }
+        System.out.println("Enter the valid last name: ");
+        String lastname = sc.nextLine();
+        boolean result2 = Pattern.matches("[A-Z][a-z]{3,}", lastname);
+        if(result2 == true){
+            System.out.println("you have entered a valid last name");
+        }else{
+            System.out.println("Its not a valid last name...\n correct format is ( e.g 'Mathew')");
 
+        }
     }
 }
