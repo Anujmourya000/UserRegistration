@@ -55,8 +55,9 @@ public class UserRegistration {
         System.out.println("Rule1: should contain atleast 8 character ");
         System.out.println("Rule2: Should contain 1 Upper case ");
         System.out.println("Rule3: Should contain 1 Numeric ");
+        System.out.println("Rule4: Should contain 1 Special character ");
         String password = sc.nextLine();
-        boolean result5 = Pattern.compile("^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]){8,}.*$").matcher(password).matches();
+        boolean result5 = Pattern.compile("^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*()_+=-]?){8,}.*$").matcher(password).matches();
         if(result5 == true){
             System.out.println("you have entered a valid password");
         }else{
