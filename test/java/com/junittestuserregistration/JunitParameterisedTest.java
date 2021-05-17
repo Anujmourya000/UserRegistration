@@ -42,7 +42,7 @@ public class JunitParameterisedTest {
     }
 
     @Test
-    public void test_User_Registration_Test_For_Multiple_Emails(){
+    public void test_User_Registration_Test_For_Multiple_Emails() throws UserRegistrationException {
         System.out.println("All emails formats : "  + expectedResult);
         Assertions.assertEquals(expectedResult, email_id.validateEmailAddress(email));
     }
